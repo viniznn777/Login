@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --defaultColor: #d8a75d;
+    --selectBackColor: #f7ac3b;
+    --selectTextColor: #0e0d0d;
+    --backgroundButton: #1e1e1d;
+}
+
+::selection {
+    background-color: var(--selectBackColor);
+    color: var(--selectTextColor);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+}
+
+/* Left Side */
+
+.header {width: 100%;margin-top: 15px; margin-left: 30px;}
+.header h2 {
+    text-shadow: 0px 0px 4px white;
+    font-size: 1.9rem;
+}
+
+.leftSide {
+    width: 50%;
+    height: 100vh;
+    background-color: var(--defaultColor);
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    gap: 24px;
+}
+
+.leftSide img {margin-top: 60px;}
+
+.btnCadastrar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.btnCadastrar p {font-size: 18px;text-shadow: 0px 0px 4px white;}
+.btnCadastrar button {
+    padding: 15px 50px;
+    background-color: var(--backgroundButton);
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--defaultColor);
+    border: none;
+    border-radius: 27px;
+    box-shadow: 18px 15px 1px 3px rgba(0, 0, 0, 0.171);
+    transition: all 0.4s;
+    margin-top: 14px;
+}
+.btnCadastrar button:hover {letter-spacing: 1px;background-color: #0e0d0d;}
+.btnCadastrar button:active {transform: scale(0.9);}
+
+/* Right Side */
+
+.rightSide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    background-color: rgb(235, 235, 235);
+}
+
+.cardLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    gap: 50px;
+}
+.cardLogin > .title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 5px 1px rgba(0, 0, 0, 0.411);
+}
+.cardLogin a {text-decoration: none;color: #0e0d0d;}
+.cardLogin a:hover {
+    text-decoration: underline;
+}
+.formContent {width: 100%;}
+
+.formContent form {display: flex;flex-direction: column;}
+.formContent form label {
+    font-size: 0.9rem;
+    margin-left: 12px;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    background-color: var(--defaultColor);
+    border-radius: 23px;
+    border: none;
+    outline: none;
+    height: 15px;
+    color: #1e1e1d;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+    padding-left: 12px;
+}
+
+input[type=submit] {
+    padding: 14px;
+    border-radius: 18px;
+    background-color: var(--defaultColor);
+    color: #0e0d0d;
+    border: none;
+    font-size: 1.3rem;
+    box-shadow: 18px 11px 1px 3px rgba(0, 0, 0, 0.171);
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 20px;
+}
+input[type=submit]:active {
+    transform: scale(0.9);
+}
+input:hover {
+    background-color: var(--selectBackColor);
+}
+i {display: none;animation: scrollDown 1s infinite ease-in-out alternate;}
+@keyframes scrollDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+@media screen and (max-height: 650px){.leftSide {height: 100vh;}.leftSide img {margin-top: 43px;}}
+@media screen and (max-width: 768px){
+    .leftSide {gap: 15px;height: 100vh;width: 40%;}
+    .leftSide img {
+        width: 320px;
+        height: 320px;
+    }
+    .rightSide {width: 100%;}
+}
+@media screen and (max-width: 604px){
+    main {
+        flex-direction: column;
+    }
+    .leftSide {order: 2;width: 100%;}
+    .rightSide {order: 1;}
+    i {display: block;font-size: 18px;}
+    .header {width: 100%;margin-left: 0;}
+}
+@media screen and (max-width: 320px) {
+    .leftSide img {width: 100%;height: auto;}
+    .cardLogin {width: 87%;}
+}
+@media screen and (max-width: 220px) {
+    .cardLogin {width: 95%;}
+    .btnCadastrar button{
+        font-size: 0.8rem;
+    }
+}

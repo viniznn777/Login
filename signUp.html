@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./imgs/icons8-digitar-32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="login.css">
+    <title>To Fly | Cadastrar</title>
+</head>
+<body>
+    <main>
+        <section class="leftSide">
+            <div class="header">
+                <h2>TO FLY</h2>
+            </div>
+            <div class="containerImage">
+                <img src="./imgs/imagem_2022-07-27_205332567-removebg-preview.png" 
+                alt="Dragon-Logo-Login" draggable="false" width="430px" height="360px">
+            </div>
+            <div class="btnCadastrar">
+                <p id="notAccount">Já possui uma conta?</p>
+                <a href="./index.html" draggable="false"><button>Login</button></a>
+            </div>
+        </section>
+    
+        <section class="rightSide">
+            <div class="cardLogin">
+                <div class="title">
+                    <h1>Cadastre-se</h1>
+                </div>
+                <div class="formContent">
+                    <form>
+                        <label for="user">Nome do usuário</label>
+                        <input type="text" name="user" required id="user" minlength="5">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
+                        <label for="pass">Senha</label>
+                        <input type="password" name="pass" required id="pass" minlength="5">
+                        <input type="submit" value="Registrar" id="submit">
+                    </form>
+                </div>
+                <a href="./index.html">Voltar</a>
+                <i class="bi bi-chevron-down"></i>
+            </div>
+        </section>
+    </main>
+    <script src="javascript.js"></script>
+    <script src="email.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./imgs/icons8-digitar-32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="login.css">
+    <title>To Fly | Login</title>
+</head>
+<body>
+    <main>
+        <section class="leftSide">
+            <div class="header">
+                <h2>TO FLY</h2>
+            </div>
+            <div class="containerImage">
+                <img src="./imgs/imagem_2022-07-27_205134877-removebg-preview.png" 
+                alt="Dragon-Logo-Login" draggable="false" width="430px" height="360px">
+            </div>
+            <div class="btnCadastrar">
+                <p id="notAccount">Não possui uma conta ainda?</p>
+                <a href="./signUp.html" draggable="false"><button>Cadastre-se</button></a>
+            </div>
+        </section>
+    
+        <section class="rightSide">
+            <div class="cardLogin">
+                <div class="title">
+                    <h1>Login</h1>
+                </div>
+                <div class="formContent">
+                    <form>
+                        <label for="user">Nome do usuário ou Email</label>
+                        <input type="text" name="user" required id="user" minlength="5">
+                        <label for="pass">Senha</label>
+                        <input type="password" name="pass" required id="pass" minlength="5">
+                        <input type="submit" value="Entrar" id="submit">
+                    </form>
+                </div>
+                <a href="javascript:void(0)">Esqueceu a senha?</a>
+                <i class="bi bi-chevron-down"></i>
+            </div>
+        </section>
+    </main>
+    <script src="javascript.js"></script>
+</body>
+</html>
